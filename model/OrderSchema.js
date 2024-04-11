@@ -1,0 +1,20 @@
+const mongoose = require('mongoose');
+const OrderSchema= new mongoose.Schema({
+    data:{
+        type:Date,
+        required:true
+    },
+    customerDetails:{
+        type:Object,
+        required:true
+    },
+    totalCost:{
+        type:Number,
+        required:true
+    },
+    product:{
+        type:Array,
+        required:true
+    }
+});
+module.exports = mongoose.model('order',OrderSchema);
