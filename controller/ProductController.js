@@ -4,6 +4,7 @@ const create=(req,resp)=>{
     const product = new ProductSchema({
         name:req.body.name,
         description:req.body.description,
+        image:req.body.image,
         unitPrice:req.body.unitPrice,
         qtyOnHand:req.body.qtyOnHand
     });
@@ -28,6 +29,7 @@ const update=async (req,resp)=>{
         $set:{
             name:req.body.name,
             description:req.body.description,
+            image:req.body.image,
             unitPrice:req.body.unitPrice,
             qtyOnHand:req.body.qtyOnHand
         }
